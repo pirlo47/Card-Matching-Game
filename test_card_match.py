@@ -18,8 +18,12 @@ class TestCardMatch(unittest.TestCase):
         for card in set(deck):
             self.assertEqual(deck.count(card), 2)
 
-   
+    def test_card_selection(self):
+        deck = board_grid()
+        playerInput = 
 
+        #test for selecting two cards 
+        self.assertIn(card_selected(deck), playerInput)
 
 
 if __name__ == "__main__":

@@ -22,7 +22,6 @@ def board_grid ():
                 
     return deck 
 
-deck = board_grid()
-print(deck)
-
+#create a function that selects two card 
+def card_selected (playerInput, deck):
     

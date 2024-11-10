@@ -19,7 +19,7 @@ Steps for TDD with unittest
 -Ensure that each pair of cards appears atleast twice 
 
 2. Card Selection 
-- Write tests for a func that handles selecting two cars, ensuring they're within boaunds and haven't already been matched 
+- Write tests for a func that handles selecting two cards, ensuring they're within bounds and haven't already been matched 
 - Test what happens when an invalid selection is made
 
 3. Card Matching Logic 
