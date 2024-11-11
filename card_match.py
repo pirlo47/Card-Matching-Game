@@ -37,5 +37,10 @@ def select_card(deck, pos1 , pos2, matched_position):
     #return valid selection 
     return (deck[pos1], deck[pos2])
     
+#create a function for card Matching Logic 
+def card_matching(deck, pos1, pos2, matched_position, match= False):
+    if deck[pos1] == deck[pos2]:
+        match = True
+        
     
     
