@@ -17,13 +17,20 @@ class TestCardMatch(unittest.TestCase):
         #check that each unique card appears exactly twice 
         for card in set(deck):
             self.assertEqual(deck.count(card), 2)
+    
+    #Test for selecting cards 
+    def setup(self):
+        #initialize a deck and match testing for two cards 
+        self.deck = board_grid()
+        self.matched_positions = {0, 2} #Assume cards at position  zero and 2 are matched 
 
-    def test_card_selection(self):
-        deck = board_grid()
-        playerInput = 
-
-        #test for selecting two cards 
-        self.assertIn(card_selected(deck), playerInput)
+    #test for valid selection  
+    def test_for_valid_selection(self):
+        result = select_card(self.deck , 1, 3, self.matched_position)
+        self.assertIsInstance(result, tuple, "Valid selection should return a tuple of two cards")
+        self.assertEqual(len(result), 2, "Two cards should be returned for a valid selection")
+        
+       
 
 
 if __name__ == "__main__":
