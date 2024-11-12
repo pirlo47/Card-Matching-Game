@@ -49,7 +49,37 @@ class TestCardMatch(unittest.TestCase):
         self.assertEqual(result, "Invalid: Same card selected")
     
     #Test for comparing the value of two selected cards 
-    
+    def test_for_matching_pair(self):
+        deck = board_grid()
+        matched_positions = set()
+
+        #assume position 1 and 2 are a matching pair 
+        deck[0] = "A Heart"
+        deck[1] = "A Heart"
+
+        result = check_for_match(deck, 0, 1, matched_positions)
+        self.assertTrue(result, "Matching pair shoukld return True")
+
+        #verify if the cards are in matched_positions
+        self.assertIn(0, matched_positions, "Position 0 should be in matched positions")
+        self.assertIn(1, matched_positions, "Position 1 should be in matched positions")
+    #test for non_matching_pairs 
+    def test_non_matching(self):
+        deck = board_grid()
+        matched_positions = set ()
+
+        deck[0] = "A Heart"
+        deck[3] = "4 Spade"
+
+        result =  check_for_match(deck, 0, 3, matched_positions)
+        self.assertFalse(result, "Non-matching pair should return False")
+
+        #verify if the cards arre NOT in the matched_positions 
+        self.assertNotIn(0, matched_positions, "Position 0 should Not be in matched positions")
+        self.assertNotIn(3, matched_positions, "Positions 3 should Not be in matched positions")
+
+
+        
 
        
 
