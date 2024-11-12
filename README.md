@@ -3,6 +3,9 @@ Matches all pairs of cards by turning over two pairs of card at a time
 This is my first project on github 
 
 This project involves a grid of face-down cards, where each card has a match hidden somewhere on the board. The player turns over two cards at a time, aiming to find matching pairs. 
+THE GAME SOLE PURPOSE IS TO UNDERSTAND TEST DRIVEN DEVELOPMENT 
+disclaimer: NOT IMPLEMENETED FOR USER INPUT 
+
 Here's an outline of the game:
 
 1. Objective: Match all pairs of cards by turning over two cards at a time 
