@@ -46,7 +46,14 @@ def check_for_match(deck, pos1, pos2, matched_positions):
         return True #Indicates successful match 
     return False 
 
+#create a function to determine when the game is completed 
+def play_game(deck, matched_positions):
+    #Game is complete if the len of matched_positions = len of deck 
+    return len(matched_positions) == len(deck)
+     
     
         
+
+
     
     

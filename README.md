@@ -3,7 +3,7 @@ Matches all pairs of cards by turning over two pairs of card at a time
 This is my first project on github 
 
 This project involves a grid of face-down cards, where each card has a match hidden somewhere on the board. The player turns over two cards at a time, aiming to find matching pairs. 
-THE GAME SOLE PURPOSE IS TO UNDERSTAND TEST DRIVEN DEVELOPMENT 
+THE PURPOSE IS TO UNDERSTAND TEST DRIVEN DEVELOPMENT 
 disclaimer: NOT IMPLEMENETED FOR USER INPUT 
 
 Here's an outline of the game:
@@ -31,8 +31,6 @@ Steps for TDD with unittest
 
 4. Game Status 
 - Write tests to determine when the game is completed 
-- Track and display the number of turns taken 
 
-5. Score Tracking 
-- track the number of attempts to complete the game, rewarding fewer turns.
+
 

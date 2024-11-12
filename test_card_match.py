@@ -19,11 +19,6 @@ class TestCardMatch(unittest.TestCase):
         for card in set(deck):
             self.assertEqual(deck.count(card), 2)
     
-    #Test for selecting cards 
-    # def test_(self\\):
-    #     #initialize a deck and match testing for two cards 
-    #     self.deck = board_grid()
-    #     self.matched_positions = {0, 2} #Assume cards at position  zero and 2 are matched 
 
     #test for valid selection  
     def test_for_valid_selection(self):
@@ -77,12 +72,29 @@ class TestCardMatch(unittest.TestCase):
         #verify if the cards arre NOT in the matched_positions 
         self.assertNotIn(0, matched_positions, "Position 0 should Not be in matched positions")
         self.assertNotIn(3, matched_positions, "Positions 3 should Not be in matched positions")
+    
+    #test for game completion 
+    def game_completion(self):
 
-
+        #initialize deck and matched_positions 
+        deck = board_grid()
+        matched_positions = set ()
+        #Initialize matched_positions are all matched cards 
+        matched_positions = matched_positions.update(range(len(deck)))
+        result = play_game(deck, matched_positions)
+        self.assertTrue(result, "All Cards have matching Pairs")
         
+    #test for incomplete matches 
+    def game_incomplete(self):
 
-       
+        #initialize deck and matched_positions 
+        deck = board_grid()
+        matched_positions = set ()
+        #initialize incomplete matches 
+        matched_positions = matched_positions.update([0, 1, 2 ,3])
+        result = play_game(deck, matched_positions)
 
+        self.assertFalse(result, "Not all cards match")
 
 if __name__ == "__main__":
     unittest.main()
